@@ -32,9 +32,11 @@ int main(int argc, const char * argv[])
 			k = 1;
 		}
 		sum = sum + k*4/((2.0*count)*(2.0*count+1.0)*(2.0*count+2.0));
-		int character = sum * (10^(count));
-		sum = sum - character;
-		output[count] = 
+		sum *= (10^(count));
+		int digit = sum
+		sum -= digit;
+		sum = sum /(10^(count));
+		output[count] = digit;
 		
 	}
 	printf(" %f ", sum);
