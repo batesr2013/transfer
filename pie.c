@@ -14,8 +14,8 @@ int main(int argc, const char * argv[])
 	int k = 0;
 	double sum = 0.0;
 	char output[1050];
-	output[0] = 3;
-	output[1] = .;
+	output[0] = '3';
+	output[1] = '.';
 	if(N > 1040)
 	{
 	printf(" number surpasses allowed value by code.");
@@ -32,12 +32,14 @@ int main(int argc, const char * argv[])
 			k = 1;
 		}
 		sum = sum + k*4/((2.0*count)*(2.0*count+1.0)*(2.0*count+2.0));
-		sum *= (10^(count));
-		int digit = sum
-		sum -= digit;
+		sum = sum *(10^(count));
+		int digit = sum;
+		sum = sum - digit;
 		sum = sum /(10^(count));
-		output[count] = digit;
+		digit = digit + 48;
+		output[count+1] = digit;
 		
 	}
-	printf(" %f ", sum);
+	
+	printf(" %s ", output);
 }
