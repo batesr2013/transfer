@@ -12,12 +12,16 @@ int main(int argc, const char * argv[])
 	int T = atoi(argv[2]);
 	int count = 1;
 	int k = 0;
-	//double sum = 3.0;
-	char output[N+2] = NULL;
+	double sum = 0.0;
+	char output[1050];
 	output[0] = 3;
 	output[1] = .;
+	if(N > 1040)
+	{
+	printf(" number surpasses allowed value by code.");
+	}
 
-	for (count=0;count < 100;count++)
+	for (count=0;count < 1000;count++)
 	{
 		if (count % 2 == 0)
 		{
@@ -27,8 +31,10 @@ int main(int argc, const char * argv[])
 		{
 			k = 1;
 		}
-		//sum = sum + k*4/((2.0*count)*(2.0*count+1.0)*(2.0*count+2.0));
-		
+		sum = sum + k*4/((2.0*count)*(2.0*count+1.0)*(2.0*count+2.0));
+		int character = sum * (10^(count));
+		sum = sum - character;
+		output[count] = 
 		
 	}
 	printf(" %f ", sum);
