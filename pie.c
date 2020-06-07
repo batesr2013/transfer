@@ -7,8 +7,8 @@ int main(int argc, const char * argv[])
 	{
 		return 0;
 	}
-	int N = atoi(argv[0]);
-	int T = atoi(argv[1]);
+	int N = atoi(argv[1]);
+	int T = atoi(argv[2]);
 	int count = 1;
 	int k = 0;
 	float sum = 3;
