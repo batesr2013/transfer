@@ -11,20 +11,20 @@ int main(int argc, const char * argv[])
 	int T = atoi(argv[2]);
 	int count = 1;
 	int k = 0;
-	float sum = 3;
-	
+	double sum = 3.0;
+
 	for (count=1;count < 1000;count++)
 	{
 		
 		if (count % 2 == 0)
 		{
-			k = 1;
+			k = -1;
 		}
 		else
 		{
-			k = -1;
+			k = 1;
 		}
-		sum = sum + k*4/((2*count)*(2*count+1)*(2*count+2));
+		sum = sum + k*4/((2.0*count)*(2.0*count+1.0)*(2.0*count+2.0));
 		
 	}
 	printf(" %f ", sum);
